@@ -1,0 +1,22 @@
+<html>
+    <head>
+    </head>
+    <body>
+        {% block conteudo %}
+        {% comment %}
+        comentário...
+        {% endcomment %}
+        <a href="{% url 'cliente:hora' %}">Ver a hora</a><br>
+        <label> Nome: {{ nome }}</label><br>
+        <label> Data de Nascimento: {{ data }} </label><br>
+        <label> Nome do cachorro: {{ dog }}</label><br>
+        <label> Cidade: {{ cidade }}</label><br>
+        <span> CPF: {{ cpf }}</span>  <br>
+        {% if rg %}
+            <span>RG: {{ RG }} </span>
+        {% else %}
+            <span> RG: não informado</span>
+        {% endif %}    
+        {% endblock conteudo%}    
+    </body>
+</html>
